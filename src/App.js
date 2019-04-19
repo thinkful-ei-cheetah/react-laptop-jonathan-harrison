@@ -6,6 +6,7 @@ import Features from './Features';
 class App extends Component {
   constructor(props){
     super(props);
+    this.updateFeature = this.updateFeature.bind(this)
     this.state = {
       selected: {
         Processor: {
@@ -29,15 +30,16 @@ class App extends Component {
   }
 
   updateFeature(feature, newValue) {
-    console.log(feature, newValue)
-  //  const selected = Object.assign({}, this.state.selected);
-   // selected[feature] = newValue;
-  //  this.setState({
-  //    selected
- //   });
+    console.log(this.state)
+    const selected = Object.assign({}, this.state.selected);
+   selected[feature] = newValue;
+    this.setState({
+     selected
+   });
   }
 
   render() {
+    console.log(this.state)
     const summary = Object.keys(this.state.selected)
           .map(key => <div className="summary__option" key={key}>
             <div className="summary__option__label">{key}  </div>
