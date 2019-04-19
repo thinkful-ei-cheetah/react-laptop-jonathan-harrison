@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Options from './FeatureItem/FeatureItem.js';
+import Options from '../FeatureItem/FeatureItem.js';
 
 class Features extends Component {
     render()  {
