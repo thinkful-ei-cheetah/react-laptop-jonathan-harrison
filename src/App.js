@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
-import Features from './Features';
-import Summary from './Summary';
+import Features from './Features/Features';
+import Summary from './Summary/Summary';
 
 
 class App extends Component {
@@ -40,11 +40,6 @@ class App extends Component {
   }
 
   render() {
-      
-
-
-    
-
     return (
       <div className="App">
         <header>
